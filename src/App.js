@@ -4,47 +4,144 @@ function App() {
   return (
     <>
       <div className="App">
-        <header className="App-header">
-          <h1>Hello and welcome</h1>
-          <form>
-            <div className="form-group">
-              <label htmlFor="exampleInputEmail1">Email address</label>
-              <input
-                type="email"
-                className="form-control"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
-                placeholder="Enter email"
-              />
-              <small id="emailHelp" className="form-text text-muted">
-                We'll never share your email with anyone else.
-              </small>
+        <header className="App-header"></header>
+      </div>
+      <main>
+        <h1 className="text-center">Hello and welcome</h1>
+        <div className="container d-flex justify-content-center ">
+          <form className="personalData rounded d-flex justify-content-center m-3 row">
+            <h2 className="m-1">Become one of us.</h2>
+            <div className="d-block">
+              <div className="form-group col-sm">
+                <label htmlFor="inputName">Name</label>
+                <input
+                  type="email"
+                  className="form-control col-sm"
+                  id="inputName"
+                  placeholder="E.g.: Mary"
+                />
+              </div>
+              <div className="form-group col-sm">
+                <label htmlFor="inputLastname">Lastname</label>
+                <input
+                  type="email"
+                  className="form-control col-sm"
+                  id="inputLastname"
+                  placeholder="E.g.: Font"
+                />
+              </div>
+              <div className="form-group col-sm">
+                <label htmlFor="birthday">Birthday</label>
+                <input
+                  type="password"
+                  className="form-control col-sm"
+                  id="birthday"
+                  placeholder="dd / mm / yy"
+                />
+              </div>
             </div>
-            <div className="form-group">
-              <label htmlFor="exampleInputPassword1">Password</label>
-              <input
-                type="password"
-                className="form-control"
-                id="exampleInputPassword1"
-                placeholder="Password"
-              />
-            </div>
-            <div className="form-group form-check">
-              <input
-                type="checkbox"
-                className="form-check-input"
-                id="exampleCheck1"
-              />
-              <label className="form-check-label" htmlFor="exampleCheck1">
-                Check me out
-              </label>
-            </div>
-            <button type="submit" className="btn btn-primary">
-              Submit
+            <button type="submit" className="btn btn-dark d-block w-25 m-2">
+              Go Back
+            </button>
+            <button
+              type="submit"
+              className="btn btn-dark d-block w-25 mt-2 mb-2"
+            >
+              Next
             </button>
           </form>
-        </header>
-      </div>
+        </div>
+        <div className="container d-flex justify-content-center ">
+          <form className="createAccount rounded d-flex justify-content-center m-3 row">
+            <h2 className="m-1">Become one of us</h2>
+            <div className="d-block">
+              <div className="form-group col-sm">
+                <label htmlFor="inputUserName">Pick a user name</label>
+                <input
+                  type="email"
+                  className="form-control col-sm"
+                  id="inputUserName"
+                  placeholder="E.g.: Mary"
+                />
+              </div>
+              <div className="form-group col-sm">
+                <label htmlFor="inputSetPassword1">Set your password:</label>
+                <input
+                  type="email"
+                  className="form-control col-sm"
+                  id="inputSetPassword1"
+                  placeholder="E.g.: myPasword!24"
+                />
+              </div>
+              <div className="form-group col-sm">
+                <label htmlFor="inputSetPassword2">
+                  Reppeat your password here:
+                </label>
+                <input
+                  type="password"
+                  className="form-control col-sm"
+                  id="inputSetPassword2"
+                  placeholder="E.g.: myPasword!24"
+                />
+              </div>
+            </div>
+            <button type="submit" className="btn btn-dark d-block w-25 m-2">
+              Go Back
+            </button>
+            <button
+              type="submit"
+              className="btn btn-dark d-block w-25 mt-2 mb-2"
+            >
+              Next
+            </button>
+          </form>
+        </div>
+        <div className="container d-flex justify-content-center ">
+          <form className="logIn rounded d-flex justify-content-center m-3 row">
+            <h2 className="m-1">Log in</h2>
+            <div className="d-block">
+              <div className="form-group col-sm">
+                <label htmlFor="logInUserName">Your user name:</label>
+                <input
+                  type="email"
+                  className="form-control col-sm"
+                  id="logInUserName"
+                  placeholder="E.g.: Mary"
+                />
+              </div>
+              <div className="form-group col-sm">
+                <label htmlFor="logInPassword">Lastname</label>
+                <input
+                  type="email"
+                  className="form-control col-sm"
+                  id="logInPassword"
+                  placeholder="E.g.: myPasword!24"
+                />
+              </div>
+            </div>
+            <div className="form-check d-flex justify-content-center">
+              <input
+                className="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckDefault"
+              />
+              <label className="form-check-label" htmlFor="flexCheckDefault">
+                Keep password
+              </label>
+            </div>
+            <button type="submit" className="btn btn-dark d-block w-25 m-2">
+              Go Back
+            </button>
+            <button
+              type="submit"
+              className="btn btn-dark d-block w-25 mt-2 mb-2"
+            >
+              Next
+            </button>
+          </form>
+        </div>
+      </main>
     </>
   );
 }

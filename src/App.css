@@ -1,4 +1,20 @@
 body {
-  background-color: black;
+  background-color: #1c1f23;
   color: white;
+}
+
+button {
+  background-color: black;
+}
+
+.personalData {
+  background-color: yellow;
+}
+
+.createAccount {
+  background-color: #d74894;
+}
+
+.logIn {
+  background-color: #06b8b9;
 }
