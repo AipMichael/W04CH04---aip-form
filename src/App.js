@@ -6,8 +6,16 @@ import PersonalData from "./components/PersonalData/PersonalData.js";
 import Context from "./components/Context/Context";
 
 function App() {
-  const addPersonalInfo = () => {
-    console.log("adding info now");
+  const [usersData, setUsersData] = useState([]);
+
+  const addPersonalInfo = (user) => {
+    setUsersData([
+      ...usersData,
+      {
+        ...user,
+        id: Math.max(...usersData.map((user) => user.id)) + 1,
+      },
+    ]);
   };
 
   const initialInfo = {
@@ -34,6 +42,7 @@ function App() {
 
   const onNext = (event) => {
     event.preventDefault();
+    console.log("onNext funciona");
     addPersonalInfo(personalInfo);
     resetInfo();
   };
