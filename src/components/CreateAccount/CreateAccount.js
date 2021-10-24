@@ -2,21 +2,29 @@ import { useContext } from "react";
 import Context from "../Context/Context";
 
 const CreateAccount = () => {
-  const { personalInfo, changeInfo, onNext } = useContext(Context);
+  const { personalInfo, changeInfo, onNext, resetInfo, usersData } =
+    useContext(Context);
+
+  const onSubmitNext = (event) => {
+    event.preventDefault();
+    onNext(event);
+    console.log(usersData);
+    resetInfo();
+  };
 
   return (
     <div className="container d-flex justify-content-center ">
       <form
         className="createAccount rounded d-flex justify-content-center m-3 row"
         autoComplete="off"
-        onSubmit={onNext}
+        onSubmit={onSubmitNext}
       >
         <h2 className="m-1">Become one of us</h2>
         <div className="d-block">
           <div className="form-group col-sm">
             <label htmlFor="userName">Pick a user name</label>
             <input
-              type="email"
+              type="text"
               className="form-control col-sm"
               id="userName"
               value={personalInfo.userName}
@@ -28,7 +36,7 @@ const CreateAccount = () => {
           <div className="form-group col-sm">
             <label htmlFor="password">Set your password:</label>
             <input
-              type="email"
+              type="password"
               className="form-control col-sm"
               id="password"
               value={personalInfo.password}
@@ -51,7 +59,7 @@ const CreateAccount = () => {
         <button
           type="submit"
           className="btn btn-dark d-block w-25 m-2"
-          onClick={onNext}
+          onClick={onSubmitNext}
         >
           Go Back
         </button>

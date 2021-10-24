@@ -45,17 +45,19 @@ function App() {
   };
 
   const onNext = (event) => {
+    event.preventDefault();
     console.log(
       "This function does not work propperly. It should NOT send unless all fields are filled."
     );
     addPersonalInfo(personalInfo);
     console.log(usersData);
-    resetInfo();
+    /*  resetInfo(); */
   };
 
   return (
     <Context.Provider
       value={{
+        usersData,
         initialInfo,
         changeInfo,
         personalInfo,
