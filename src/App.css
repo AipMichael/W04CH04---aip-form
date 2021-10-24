@@ -3,12 +3,9 @@ body {
   color: white;
 }
 
-button {
-  background-color: black;
-}
-
 .personalData {
   background-color: yellow;
+  color: #1c1f23;
 }
 
 .createAccount {
