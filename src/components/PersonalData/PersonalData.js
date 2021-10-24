@@ -1,31 +1,8 @@
-import { useState } from "react";
+import { useContext } from "react";
+import Context from "../Context/Context";
 
-const PersonalData = ({ onSubmit }) => {
-  const initialInfo = {
-    name: "",
-    lastname: "",
-    email: "",
-    birthday: "",
-  };
-
-  const [personalInfo, setPersonalInfo] = useState(initialInfo);
-
-  const changeInfo = (event) => {
-    setPersonalInfo({
-      ...personalInfo,
-      [event.target.id]: event.target.value,
-    });
-  };
-
-  const resetInfo = () => {
-    setPersonalInfo(initialInfo);
-  };
-
-  const onNext = (event) => {
-    event.preventDefault();
-    onSubmit(personalInfo);
-    resetInfo();
-  };
+const PersonalData = () => {
+  const { personalInfo, changeInfo, onNext } = useContext(Context);
 
   return (
     <>
@@ -87,7 +64,7 @@ const PersonalData = ({ onSubmit }) => {
           <button
             type="submit"
             className="btn btn-dark d-block w-25 mt-2 mb-2"
-            onClick={onSubmit}
+            onClick={onNext}
           >
             Next
           </button>

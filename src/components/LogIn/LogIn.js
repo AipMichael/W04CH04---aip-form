@@ -1,7 +1,15 @@
+/* import { useState } from "react";
+import { useContext } from "react";
+import Context from "../Context/Context"; */
+
 const LogIn = () => {
+  /*  const {  } = useContext(Context); */
   return (
     <div className="container d-flex justify-content-center ">
-      <form className="logIn rounded d-flex justify-content-center m-3 row">
+      <form
+        className="logIn rounded d-flex justify-content-center m-3 row"
+        autoComplete="off"
+      >
         <h2 className="m-1">Log in</h2>
         <div className="d-block">
           <div className="form-group col-sm">
@@ -14,7 +22,7 @@ const LogIn = () => {
             />
           </div>
           <div className="form-group col-sm">
-            <label htmlFor="logInPassword">Lastname</label>
+            <label htmlFor="logInPassword">Your password</label>
             <input
               type="email"
               className="form-control col-sm"
