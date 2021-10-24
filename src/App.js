@@ -13,9 +13,13 @@ function App() {
       ...usersData,
       {
         ...user,
-        id: Math.max(...usersData.map((user) => user.id)) + 1,
+        id:
+          usersData.length === 0
+            ? (user.id = 1)
+            : Math.max(...usersData.map((user) => user.id)) + 1,
       },
     ]);
+    console.log("adding info");
   };
 
   const initialInfo = {
@@ -41,9 +45,11 @@ function App() {
   };
 
   const onNext = (event) => {
-    event.preventDefault();
-    console.log("onNext funciona");
+    console.log(
+      "This function does not work propperly. It should NOT send unless all fields are filled."
+    );
     addPersonalInfo(personalInfo);
+    console.log(usersData);
     resetInfo();
   };
 
