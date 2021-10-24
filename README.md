@@ -4,11 +4,11 @@
 --> asks for input.
 --> checks for email, and bday format when receives condition.
 
-## UserDetails
+## PersonalData
 
 --> renders info received (in form of FormItem)
---> asks for NAME, EMAIL, LASTNAME, BDAY.
---> receives an action an performs it (store data)
+--> receives NAME, EMAIL, LASTNAME, BDAY from user.
+--> receives an action an performs it (store data).
 
 ## AccessData
 
