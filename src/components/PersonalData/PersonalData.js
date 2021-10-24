@@ -9,7 +9,7 @@ const PersonalData = () => {
       <div className="container d-flex justify-content-center ">
         <form
           className="personalData rounded d-flex justify-content-center m-3 row"
-          autoComplete="off"
+          autoComplete={"off"}
           onSubmit={onNext}
         >
           <h2 className="m-1">Become one of us.</h2>
@@ -23,6 +23,8 @@ const PersonalData = () => {
                 value={personalInfo.name}
                 onChange={changeInfo}
                 placeholder="E.g.: Mary"
+                autoComplete="off"
+                required
               />
             </div>
             <div className="form-group col-sm">
@@ -34,6 +36,7 @@ const PersonalData = () => {
                 value={personalInfo.lastname}
                 onChange={changeInfo}
                 placeholder="E.g.: Font"
+                required
               />
             </div>
             <div className="form-group col-sm">
@@ -46,6 +49,7 @@ const PersonalData = () => {
                 onChange={changeInfo}
                 placeholder="E.g.: mary.font@email.com"
                 pattern="[^ @]*@[^ @]*"
+                required
               />
             </div>
             <div className="form-group col-sm">
@@ -57,6 +61,7 @@ const PersonalData = () => {
                 value={personalInfo.birthday}
                 onChange={changeInfo}
                 placeholder="dd / mm / yy"
+                required
               />
             </div>
           </div>

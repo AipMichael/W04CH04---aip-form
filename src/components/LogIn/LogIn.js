@@ -8,7 +8,7 @@ const LogIn = () => {
     <div className="container d-flex justify-content-center ">
       <form
         className="logIn rounded d-flex justify-content-center m-3 row"
-        autoComplete="off"
+        autoComplete="nope"
       >
         <h2 className="m-1">Log in</h2>
         <div className="d-block">
@@ -19,6 +19,7 @@ const LogIn = () => {
               className="form-control col-sm"
               id="logInUserName"
               placeholder="E.g.: Mary"
+              required
             />
           </div>
           <div className="form-group col-sm">

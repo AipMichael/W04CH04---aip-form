@@ -22,6 +22,7 @@ const CreateAccount = () => {
               value={personalInfo.userName}
               onChange={changeInfo}
               placeholder="E.g.: Mary"
+              required
             />
           </div>
           <div className="form-group col-sm">
